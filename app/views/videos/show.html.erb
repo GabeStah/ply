@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @video.name %>
+</p>
+
+<p>
+  <strong>Youtube:</strong>
+  <%= @video.youtube_id %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @video.duration %>
+</p>
+
+<p>
+  <strong>Release date:</strong>
+  <%= @video.release_date %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @video.published %>
+</p>
+
+<p>
+  <strong>Privacy:</strong>
+  <%= @video.privacy %>
+</p>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
