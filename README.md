@@ -1,21 +1,21 @@
 ## Basic Functionality
 
-* Will store basic information about an **Item** (Name, YouTube ID, duration, release date, etc).
-* An **Item** can belong to one or more **Series**.
-* A **Series** is roughly thought of as a playlist holding multiple **Items** with basic attributes (Name, YouTube ID, release date, etc).
-* An **Annotation** is a set of parameters that define how an **Item's** YouTube annotation is created (position, size, text, color, URL, etc).
-* An **Item** may have multiple **Templates** associated with it.
-* A **Template** is a set of pre-configured **Annotations** that outline how the **Annotation** appears and what associated **Item** they should contain (e.g. URL to next **Item** in series, similar **Item**, etc).
-* A **Tag** is a simple identifier that can be associated with multiple objects (**Item**, **Series**, etc).  **Tags** consist of very basic identifiers (name, slug).
+* Will store basic information about an **Video** (Name, YouTube ID, duration, release date, etc).
+* An **Video** can belong to one or more **Series**.
+* A **Series** is roughly thought of as a playlist holding multiple **Videoes** with basic attributes (Name, YouTube ID, release date, etc).
+* An **Annotation** is a set of parameters that define how an **Video's** YouTube annotation is created (position, size, text, color, URL, etc).
+* An **Video** may have multiple **Templates** associated with it.
+* A **Template** is a set of pre-configured **Annotations** that outline how the **Annotation** appears and what associated **Video** they should contain (e.g. URL to next **Video** in series, similar **Video**, etc).
+* A **Tag** is a simple identifier that can be associated with multiple objects (**Video**, **Series**, etc).  **Tags** consist of very basic identifiers (name, slug).
 * Some objects (**Tags**, **Templates**, **Game**, etc) might be broken into parent-child relationships.  A **Game** object, for example, might have a set of default **Tags** assigned to it, and upon creation of a object associated with **Game**, such as a **Series**, the **Tags** are _copied_ to the newly created **Series**.  However, when the original **Game** object is updated and its **Tags** are changed, that has no impact on previously associated **Series** object unless that **Series** is specifically _forced_ to update **Tag** data from the associated **Game**.
 
-## Item
+## Video
 
 ### Fields
 
-* name:string - Name of item to identify it locally; _not_ the full title for upload.
+* name:string - Name of video to identify it locally; _not_ the full title for upload.
 * youtube_id:string - YouTube ID
-* duration:integer - Duration of item
+* duration:integer - Duration of video
 * release_at:datetime - When to release
 * published:boolean - Is published
 * privacy:string - Public, Unlisted, Private
@@ -26,7 +26,7 @@ https://github.com/kernow/shortcode
 
 ## Description
 
-Description is a template for generating the description text for an Item.  The text of a Description will consist of a mix of normal text and keyword insertion points or [shortcodes] to indicate where programmatic information should be inserted.
+Description is a template for generating the description text for an Video.  The text of a Description will consist of a mix of normal text and keyword insertion points or [shortcodes] to indicate where programmatic information should be inserted.
 
 An example Description block might look like so:
 
@@ -81,7 +81,7 @@ World of Logs: http://worldoflogs.com/guilds/4721/
 
 ## Tags & Tag Collections
 
-A Tag is a simple identifier that can be associated with multiple objects (Globally, Item, Series, etc). Tags consist of very basic identifiers (name, slug).
+A Tag is a simple identifier that can be associated with multiple objects (Globally, Video, Series, etc). Tags consist of very basic identifiers (name, slug).
 
 Implemented with gem: https://github.com/mbleigh/acts-as-taggable-on
 
