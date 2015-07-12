@@ -77,6 +77,10 @@ World of Logs: http://worldoflogs.com/guilds/4721/
 
 ## Tags & Tag Collections
 
+A Tag is a simple identifier that can be associated with multiple objects (Globally, Item, Series, etc). Tags consist of very basic identifiers (name, slug).
+
+Implemented with gem: https://github.com/mbleigh/acts-as-taggable-on
+
 Similar to a Description, a Tag can contain and individual text object or a combination of multiple objects through [shortcode] inclusion.  A Tag Collection might be broken up as follows:
 
 ```
