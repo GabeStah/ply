@@ -20,6 +20,10 @@
 * published:boolean - Is published
 * privacy:string - Public, Unlisted, Private
 
+## Shortcodes
+
+https://github.com/kernow/shortcode
+
 ## Description
 
 Description is a template for generating the description text for an Item.  The text of a Description will consist of a mix of normal text and keyword insertion points or [shortcodes] to indicate where programmatic information should be inserted.
